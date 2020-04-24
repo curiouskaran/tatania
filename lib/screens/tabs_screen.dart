@@ -5,6 +5,7 @@ import './favoritesScreen.dart';
 import '../widgets/main_drawer.dart';
 
 class TabsScreen extends StatelessWidget {
+  static const routeName = '/';
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
