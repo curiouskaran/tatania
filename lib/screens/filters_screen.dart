@@ -50,7 +50,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   final Map<String, bool> _filters = {
                     'gluten': _glutenFree,
                     'vegetarian': _vegetarian,
-                    'vegan': _vegetarian,
+                    'vegan': _vegan,
                     'lactose': _lactoseFree
                   };
                   widget.setFilters(_filters);
