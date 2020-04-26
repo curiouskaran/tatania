@@ -52,21 +52,29 @@ class _CategoryMealsScreenState extends State<CategoryMealsScreen> {
         title: Text(categoryTitle),
         backgroundColor: Color(categoryColor),
       ),
-      body: ListView.builder(
-        itemBuilder: (ctx, index) {
-          return MealItem(
-            id: displayedMeals[index].id,
-            color: categoryColor,
-            title: displayedMeals[index].title,
-            imageUrl: displayedMeals[index].imageUrl,
-            duration: displayedMeals[index].duration,
-            affordability: displayedMeals[index].affordability,
-            complexity: displayedMeals[index].complexity,
-            deleteItem: _removeMeal,
-          );
-        },
-        itemCount: displayedMeals.length,
-      ),
+      body: displayedMeals.length > 0
+          ? ListView.builder(
+              itemBuilder: (ctx, index) {
+                return MealItem(
+                  id: displayedMeals[index].id,
+                  color: categoryColor,
+                  title: displayedMeals[index].title,
+                  imageUrl: displayedMeals[index].imageUrl,
+                  duration: displayedMeals[index].duration,
+                  affordability: displayedMeals[index].affordability,
+                  complexity: displayedMeals[index].complexity,
+                  deleteItem: _removeMeal,
+                );
+              },
+              itemCount: displayedMeals.length,
+            )
+          : Center(
+              child: Padding(
+                padding: EdgeInsets.all(20),
+                child: Text(
+                    'No dishes available in this prefrence for this category!!😞.Please try different category or try updating the filters.'),
+              ),
+            ),
     );
   }
 }
