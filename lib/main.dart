@@ -28,8 +28,7 @@ class _MyAppState extends State<MyApp> {
   void _setFilters(Map<String, bool> filters) {
     setState(() {
       _filters = filters;
-
-      _availableMeals = _availableMeals.where((meal) {
+      _availableMeals = DUMMY_MEALS.where((meal) {
         if (_filters['gluten'] && !meal.isGlutenFree) {
           return false;
         }
