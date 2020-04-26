@@ -1,6 +1,6 @@
 # meals_app
 
-A new Flutter project.
+A new Flutter project part of udemy course by maximillian with some of my own tweaks.
 
 ## Getting Started
 
